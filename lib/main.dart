@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hollow/app/modules/onboarding/providers/auth_repository.dart';
-import 'package:hollow/app/modules/onboarding/screens/createaccountmodified.dart';
+import 'package:hollow/app/modules/onboarding/screens/createaccount.dart';
 import 'package:hollow/utils/constants.dart';
 
 void main() {
