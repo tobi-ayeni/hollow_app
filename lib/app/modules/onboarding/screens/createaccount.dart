@@ -27,6 +27,7 @@ class CreateAccount extends StatelessWidget {
           child: Stack(
             children: [
               SingleChildScrollView(
+                key: const Key("scrollView"),
                 child: Padding(
                   padding: const EdgeInsets.only(
                       left: kMediumPadding,
@@ -86,29 +87,11 @@ class CreateAccount extends StatelessWidget {
               height: kLargePadding,
             ),
             _nameField(),
-            const SizedBox(
-              height: kMediumPadding,
-            ),
             _lastNameField(),
-            const SizedBox(
-              height: kMediumPadding,
-            ),
             _userNameField(),
-            const SizedBox(
-              height: kMediumPadding,
-            ),
             _phoneField(),
-            const SizedBox(
-              height: kMediumPadding,
-            ),
             _emailField(),
-            const SizedBox(
-              height: kMediumPadding,
-            ),
             _passwordField(),
-            const SizedBox(
-              height: kSmallPadding,
-            ),
             BlocBuilder<OnBoardingBloc, OnBoardingState>(
               builder: (context, state) {
                 return Row(
@@ -348,14 +331,17 @@ class CreateAccount extends StatelessWidget {
   Widget _passwordField() {
     return BlocBuilder<OnBoardingBloc, OnBoardingState>(
       builder: (context, state) {
-        return TextFieldComponent(
-          hintText: hintPassword,
-          inputType: TextInputType.text,
-          onChanged: (val) {
-            context.read<OnBoardingBloc>().add(
-                  SignUpPasswordChanged(val!),
-                );
-          },
+        return Padding(
+          padding: const EdgeInsets.only(bottom: kSmallPadding),
+          child: TextFieldComponent(
+            hintText: hintPassword,
+            inputType: TextInputType.text,
+            onChanged: (val) {
+              context.read<OnBoardingBloc>().add(
+                    SignUpPasswordChanged(val!),
+                  );
+            },
+          ),
         );
       },
     );
@@ -364,12 +350,15 @@ class CreateAccount extends StatelessWidget {
   Widget _emailField() {
     return BlocBuilder<OnBoardingBloc, OnBoardingState>(
       builder: (context, state) {
-        return TextFieldComponent(
-          hintText: hintEmailAddress,
-          inputType: TextInputType.emailAddress,
-          onChanged: (val) => context.read<OnBoardingBloc>().add(
-                SignUpEmailChanged(val!),
-              ),
+        return Padding(
+          padding: const EdgeInsets.only(bottom: kMediumPadding),
+          child: TextFieldComponent(
+            hintText: hintEmailAddress,
+            inputType: TextInputType.emailAddress,
+            onChanged: (val) => context.read<OnBoardingBloc>().add(
+                  SignUpEmailChanged(val!),
+                ),
+          ),
         );
       },
     );
@@ -378,12 +367,15 @@ class CreateAccount extends StatelessWidget {
   Widget _phoneField() {
     return BlocBuilder<OnBoardingBloc, OnBoardingState>(
       builder: (context, state) {
-        return TextFieldComponent(
-          hintText: hintPhoneNumber,
-          inputType: TextInputType.phone,
-          onChanged: (val) => context.read<OnBoardingBloc>().add(
-                SignUpPhoneChanged(val!),
-              ),
+        return Padding(
+          padding: const EdgeInsets.only(bottom: kMediumPadding),
+          child: TextFieldComponent(
+            hintText: hintPhoneNumber,
+            inputType: TextInputType.phone,
+            onChanged: (val) => context.read<OnBoardingBloc>().add(
+                  SignUpPhoneChanged(val!),
+                ),
+          ),
         );
       },
     );
@@ -392,12 +384,15 @@ class CreateAccount extends StatelessWidget {
   Widget _userNameField() {
     return BlocBuilder<OnBoardingBloc, OnBoardingState>(
       builder: (context, state) {
-        return TextFieldComponent(
-          hintText: hintUserName,
-          inputType: TextInputType.text,
-          onChanged: (val) => context.read<OnBoardingBloc>().add(
-                SignUpUserNameChanged(val!),
-              ),
+        return Padding(
+          padding: const EdgeInsets.only(bottom: kMediumPadding),
+          child: TextFieldComponent(
+            hintText: hintUserName,
+            inputType: TextInputType.text,
+            onChanged: (val) => context.read<OnBoardingBloc>().add(
+                  SignUpUserNameChanged(val!),
+                ),
+          ),
         );
       },
     );
@@ -406,12 +401,15 @@ class CreateAccount extends StatelessWidget {
   Widget _lastNameField() {
     return BlocBuilder<OnBoardingBloc, OnBoardingState>(
       builder: (context, state) {
-        return TextFieldComponent(
-          hintText: hintLastName,
-          inputType: TextInputType.text,
-          onChanged: (val) => context.read<OnBoardingBloc>().add(
-                SignUpLastNameChanged(val!),
-              ),
+        return Padding(
+          padding: const EdgeInsets.only(bottom: kMediumPadding),
+          child: TextFieldComponent(
+            hintText: hintLastName,
+            inputType: TextInputType.text,
+            onChanged: (val) => context.read<OnBoardingBloc>().add(
+                  SignUpLastNameChanged(val!),
+                ),
+          ),
         );
       },
     );
@@ -420,12 +418,15 @@ class CreateAccount extends StatelessWidget {
   Widget _nameField() {
     return BlocBuilder<OnBoardingBloc, OnBoardingState>(
       builder: (context, state) {
-        return TextFieldComponent(
-          hintText: hintName,
-          inputType: TextInputType.text,
-          onChanged: (val) => context.read<OnBoardingBloc>().add(
-                SignUpNameChanged(val!),
-              ),
+        return Padding(
+          padding: const EdgeInsets.only(bottom: kMediumPadding),
+          child: TextFieldComponent(
+            hintText: hintName,
+            inputType: TextInputType.text,
+            onChanged: (val) => context.read<OnBoardingBloc>().add(
+                  SignUpNameChanged(val!),
+                ),
+          ),
         );
       },
     );
