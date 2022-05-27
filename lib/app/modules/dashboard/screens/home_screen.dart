@@ -1,26 +1,26 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hollow/app/helpers/helpers.dart';
+import 'package:hollow/app/modules/components/flush_bar.dart';
 import 'package:hollow/app/modules/dashboard/models/home_model.dart';
 import 'package:hollow/app/modules/dashboard/screens/create_wallet.dart';
 import 'package:hollow/app/navigators/navigators.dart';
 import 'package:hollow/utils/asset_paths.dart';
 import 'package:hollow/utils/constants.dart';
 import 'package:hollow/utils/strings.dart';
-import 'package:swipe_deck/swipe_deck.dart';
 import 'package:collection/collection.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
+
+
   @override
   Widget build(BuildContext context) {
-    int currentIndex = 1;
-    // Future.delayed(const Duration(milliseconds: 500)).then(
-    //   (value) => showPendingBar(context, warningText),
-    // );
+    Future.delayed(const Duration(milliseconds: 500)).then(
+      (value) => showPendingBar(context, warningText),
+    );
     return Container(
       height: double.infinity,
       padding: const EdgeInsets.only(
@@ -104,145 +104,13 @@ class HomeScreen extends StatelessWidget {
                   )
                 : Stack(
                     children: [
-                      // RotationTransition(
-                      //     turns: const AlwaysStoppedAnimation(170 / 360),
-                      //     child: Container(
-                      //       margin: const EdgeInsets.symmetric(
-                      //           horizontal: 15, vertical: 25),
-                      //       height: 200,
-                      //       decoration: BoxDecoration(
-                      //         color: kFlushBarColor.withOpacity(0.3),
-                      //         borderRadius:
-                      //             BorderRadius.circular(kRegularPadding),
-                      //       ),
-                      //     )),
                       buildStackedImages(context)
-                      // Container(
-                      //   child: SwipeDeck(
-                      //     startIndex: 0,
-                      //     emptyIndicator: Container(
-                      //       child: Center(
-                      //         child: Text("Nothing Here"),
-                      //       ),
-                      //     ),
-                      //     cardSpreadInDegrees: 5, // Change the Spread of Background Cards
-                      //     onSwipeLeft: (){
-                      //       print("USER SWIPED LEFT -> GOING TO NEXT WIDGET");
-                      //     },
-                      //     onSwipeRight: (){
-                      //       print("USER SWIPED RIGHT -> GOING TO PREVIOUS WIDGET");
-                      //     },
-                      //     onChange: (index){
-                      //       print(walletList[index]);
-                      //     },
-                      //     widgets: walletList
-                      //         .map((e) => GestureDetector(
-                      //       onTap: () {
-                      //         print(e);
-                      //       },
-                      //       child: Container(
-                      //         height: 200,
-                      //           decoration: BoxDecoration(
-                      //             color: Colors.red,
-                      //           borderRadius: BorderRadius.circular(kRegularPadding)),
-                      //           child:Column(
-                      //             crossAxisAlignment: CrossAxisAlignment.start,
-                      //             children: [
-                      //               Row(
-                      //                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      //                 children: [
-                      //                   Text(
-                      //                     "${e.walletType} balance",
-                      //                     style: textTheme(context)
-                      //                         .headline3!
-                      //                         .copyWith(color: kCheckBoxInActive),
-                      //                   ),
-                      //                   Container(
-                      //                     padding: const EdgeInsets.all(kPadding),
-                      //                     decoration: BoxDecoration(
-                      //                         border: Border.all(width: 1.5, color: kCheckBoxInActive),
-                      //                         borderRadius: kBorderRadius),
-                      //                     child: const Icon(
-                      //                       Icons.add,
-                      //                       color: kCheckBoxInActive,
-                      //                       size: 15,
-                      //                     ),
-                      //                   )
-                      //                 ],
-                      //               ),
-                      //               const SizedBox(
-                      //                 height: kRegularPadding,
-                      //               ),
-                      //               Text(
-                      //                 e.amount,
-                      //                 style: textTheme(context).bodyText1,
-                      //               ),
-                      //               const SizedBox(
-                      //                 height: kMacroPadding,
-                      //               ),
-                      //               Row(
-                      //                 children: const [
-                      //                   CardBalance(
-                      //                     text: "Withdraw",
-                      //                     color: kCardInfoColor,
-                      //                     color2: kTransparent,
-                      //                   ),
-                      //                   SizedBox(
-                      //                     width: kRegularPadding,
-                      //                   ),
-                      //                   CardBalance(
-                      //                     text: "Fund",
-                      //                     color: kFlushBarColor,
-                      //                     color2: kCardInfoColor,
-                      //                   ),
-                      //                 ],
-                      //               )
-                      //             ],
-                      //           ),),
-                      //     ))
-                      //         .toList(),
-                      //   ),
-                      // ),
-                      // buildStackedImages(context)
-                      // Stack(
-                      //   children: walletList
-                      //       .map(
-                      //         (e) => Stack(
-                      //           children: [
-                      //             Container(
-                      //               margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 25),
-                      //               height: 200,
-                      //               decoration: BoxDecoration(
-                      //                 color: const Color(0XFFFFE57E),
-                      //                 borderRadius:
-                      //                 BorderRadius.circular(kRegularPadding),
-                      //               ),
-                      //               child: Column(
-                      //                 children: [
-                      //
-                      //                 ],
-                      //               ),
-                      //             ),
-                      //             Container(
-                      //               margin: const EdgeInsets.only(left: 15, top: 35, right: 15),
-                      //               height: 200,
-                      //               decoration: BoxDecoration(
-                      //                 color: kFlushBarColor,
-                      //                 borderRadius:
-                      //                 BorderRadius.circular(kRegularPadding),
-                      //               ),
-                      //             ),
-                      //           ],
-                      //         ),
-                      //       )
-                      //       .toList(),
-                      // )
                     ],
                   ),
             const SizedBox(
               height: kRegularPadding,
             ),
-            Container(
+             Container(
               height: 7,
               width: 30,
               decoration: BoxDecoration(
@@ -340,18 +208,16 @@ class HomeScreen extends StatelessWidget {
   Widget buildStackedImages(BuildContext context) {
     double size = 220;
     final items = walletList
-        .asMap()
         .map(
-          (index, e) {
-            return MapEntry(index, buildContainer(e, index, context));
+          ( e) {
+            return buildContainer(e, context);
           },
         )
-        .values
         .toList();
     return StackedWidgets(items, size);
   }
 
-  Widget buildContainer(WalletList e, int index, BuildContext context) {
+  Widget buildContainer(WalletList e,  BuildContext context) {
     return Container(
       height: 220,
       padding: const EdgeInsets.all(kMediumPadding),
@@ -452,22 +318,30 @@ class StackedWidgets extends StatefulWidget {
 }
 
 class _StackedWidgetsState extends State<StackedWidgets> {
+  late final List<Widget> _all;
+  late final List<Widget> allItems;
+
+  @override
+  void initState() {
+    super.initState();
+    _all = widget.items.reversed.toList();
+    allItems = widget.items.reversed.toList();
+  }
+
   @override
   Widget build(BuildContext context) {
-    final allItems = widget.items
-        .asMap()
-        .map((index, item) {
-          final value = Draggable(
+    return Stack(
+      children: allItems
+          .mapIndexed(
+            (index, Widget item) => Draggable(
               onDragEnd: (val) {
                 setState(
                   () {
-                    // var lastWidget = item;
-                    widget.items.remove(item);
-                    widget.items.insert(widget.items.length - 1 , item);
-                    // widget.items.insert(widget.items.lastIndexOf(item), item);
+                    allItems.remove(item);
+                    allItems.insert(0, item);
+
                   },
                 );
-                print("drad");
               },
               childWhenDragging: RotationTransition(
                   turns: const AlwaysStoppedAnimation(170 / 360),
@@ -483,34 +357,34 @@ class _StackedWidgetsState extends State<StackedWidgets> {
               feedback: Container(
                 height: widget.size,
                 decoration: BoxDecoration(
-                  color: index == 1 ? const Color(0XFFFFE57E) : kFlushBarColor,
+                  color: _all.indexOf(item) % 2 == 0
+                      ? const Color(0XFFFFE57E)
+                      : kFlushBarColor,
                   borderRadius: BorderRadius.circular(kRegularPadding),
                 ),
                 margin: EdgeInsets.only(
-                    top: index == 1 ? 20 : 40,
-                    left: index == 1 ? 30 : 10,
-                    right: index == 1 ? 30 : 10),
+                    top: _all.indexOf(item) % 2 == 0 ? 20 : 40,
+                    left: _all.indexOf(item) % 2 == 0 ? 30 : 10,
+                    right: _all.indexOf(item) % 2 == 0 ? 30 : 10),
                 child: item,
               ),
               child: Container(
                 height: widget.size,
                 decoration: BoxDecoration(
-                  color: index == 1 ? const Color(0XFFFFE57E) : kFlushBarColor,
+                  color: _all.indexOf(item) % 2 == 0
+                      ? const Color(0XFFFFE57E)
+                      : kFlushBarColor,
                   borderRadius: BorderRadius.circular(kRegularPadding),
                 ),
                 margin: EdgeInsets.only(
-                    top: index == 1 ? 20 : 40,
-                    left: index == 1 ? 30 : 10,
-                    right: index == 1 ? 30 : 10),
+                    top: _all.indexOf(item) % 2 == 0 ? 20 : 40,
+                    left: _all.indexOf(item) % 2 == 0 ? 30 : 10,
+                    right: _all.indexOf(item) % 2 == 0 ? 30 : 10),
                 child: item,
-              ));
-          return MapEntry(index, value);
-        })
-        .values
-        .toList();
-    return Stack(
-      // index: 0,
-      children: allItems,
+              ),
+            ),
+          )
+          .toList(),
     );
   }
 }

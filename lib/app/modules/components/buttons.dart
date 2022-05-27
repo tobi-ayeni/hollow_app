@@ -5,12 +5,14 @@ import 'package:hollow/utils/constants.dart';
 class ButtonWidget extends StatelessWidget {
   final String buttonText;
   final Color backGroundColor, textColor;
+  final Color? borderColor;
   final Function() onPressed;
 
   const ButtonWidget(
       {Key? key,
       required this.buttonText,
       required this.textColor,
+        this.borderColor,
       required this.backGroundColor, required this.onPressed})
       : super(key: key);
 
@@ -24,6 +26,7 @@ class ButtonWidget extends StatelessWidget {
         alignment: Alignment.center,
         decoration: BoxDecoration(
           color: backGroundColor,
+          border: Border.all(color: borderColor == null ?  kTransparent : borderColor! ),
           borderRadius: BorderRadius.circular(kSmallPadding),
         ),
         child: Text(

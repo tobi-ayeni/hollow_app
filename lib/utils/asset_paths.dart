@@ -14,4 +14,12 @@ class  AssetPaths {
   static String ticketIcon = "${iconPath}ticket.svg";
   static String circleIcon = "${iconPath}circle.svg";
   static String noTransaction = "${imagePath}no_transaction.png";
+  static String ngnIcon = "${iconPath}ngn.svg";
+  static String ghcIcon = "${iconPath}ghc.svg";
+  static String kesIcon = "${iconPath}kes.svg";
+  static String gbpIcon = "${iconPath}gbp.svg";
+  static String eurIcon = "${iconPath}eur.svg";
+  static String successIcon = "${imagePath}success.png";
+  static String homeIcon = "${iconPath}home.svg";
+
 }

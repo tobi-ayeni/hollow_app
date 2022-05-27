@@ -4,18 +4,20 @@ import 'package:hollow/utils/constants.dart';
 
 class TextFieldComponent extends StatelessWidget {
   final String hintText;
-  final Function(String?)? onSaved;
+  final Function(String?)? onChanged;
   final TextInputType inputType;
 
-  const TextFieldComponent({Key? key, required this.hintText, this.onSaved, required this.inputType})
+
+  const TextFieldComponent({Key? key, required this.hintText,required this.inputType, required this.onChanged})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       style: textTheme(context).headline2!.copyWith(color: kPrimaryColor),
-      onSaved: onSaved,
       keyboardType: inputType,
+      onChanged: onChanged,
+      autovalidateMode: AutovalidateMode.onUserInteraction,
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle:

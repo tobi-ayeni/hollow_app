@@ -67,7 +67,7 @@ class _TabLayoutState extends State<TabLayout> {
       onItemSelected: (index) => setState(() => _currentIndex = index),
       items: <BottomNavyBarItem>[
         BottomNavyBarItem(
-          icon: AssetPaths.walletIcon,
+          icon: AssetPaths.homeIcon,
           inactiveColor: kIconColor,
           textAlign: TextAlign.center,
         ),

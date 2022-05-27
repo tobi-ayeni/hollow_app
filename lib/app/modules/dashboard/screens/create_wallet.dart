@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:hollow/app/helpers/helpers.dart';
 import 'package:hollow/app/modules/components/buttons.dart';
 import 'package:hollow/app/modules/dashboard/models/home_model.dart';
+import 'package:hollow/app/modules/dashboard/screens/search_wallet.dart';
+import 'package:hollow/app/navigators/navigators.dart';
 import 'package:hollow/utils/constants.dart';
 import 'package:hollow/utils/strings.dart';
 
@@ -105,10 +107,12 @@ class _CreateWalletState extends State<CreateWallet> {
               ),
             ),
             ButtonWidget(
-              onPressed: () {},
+              onPressed: () {
+                pushTo(context, SearchWallet());
+              },
               buttonText: proceed,
               textColor: kPrimaryWhite,
-              backGroundColor: kInactiveButtonColor,
+              backGroundColor: _wallet == "Fiat Wallet" ? kBlueDeepColor :  kInactiveButtonColor,
             ),
             const SizedBox(
               height: 20,

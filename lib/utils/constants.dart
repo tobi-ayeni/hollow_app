@@ -201,10 +201,10 @@ TextStyle kBodyText2Style = const TextStyle(
 );
 
 TextStyle kSubtitle1Style = const TextStyle(
-  fontFamily: "DMSans",
-  fontWeight: FontWeight.w400,
-  color: kBorderColor,
-  fontSize: 14,
+  fontFamily: "Rubik",
+  fontWeight: FontWeight.w500,
+  color: kColorGreen,
+  fontSize: 16,
 );
 
 TextStyle kSubtitle2Style = const TextStyle(
