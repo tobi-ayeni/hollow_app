@@ -6,14 +6,16 @@ class TextFieldComponent extends StatelessWidget {
   final String hintText;
   final Function(String?)? onChanged;
   final TextInputType inputType;
+  final String valKey;
 
 
-  const TextFieldComponent({Key? key, required this.hintText,required this.inputType, required this.onChanged})
+  const TextFieldComponent({Key? key, required this.hintText,required this.inputType, required this.onChanged, required this.valKey})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      key: Key(valKey),
       style: textTheme(context).headline2!.copyWith(color: kPrimaryColor),
       keyboardType: inputType,
       onChanged: onChanged,

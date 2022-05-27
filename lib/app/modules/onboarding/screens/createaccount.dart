@@ -334,6 +334,7 @@ class CreateAccount extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.only(bottom: kSmallPadding),
           child: TextFieldComponent(
+            valKey: "passwordKey",
             hintText: hintPassword,
             inputType: TextInputType.text,
             onChanged: (val) {
@@ -353,6 +354,7 @@ class CreateAccount extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.only(bottom: kMediumPadding),
           child: TextFieldComponent(
+            valKey: "emailKey",
             hintText: hintEmailAddress,
             inputType: TextInputType.emailAddress,
             onChanged: (val) => context.read<OnBoardingBloc>().add(
@@ -370,6 +372,7 @@ class CreateAccount extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.only(bottom: kMediumPadding),
           child: TextFieldComponent(
+            valKey: "phoneKey",
             hintText: hintPhoneNumber,
             inputType: TextInputType.phone,
             onChanged: (val) => context.read<OnBoardingBloc>().add(
@@ -387,6 +390,7 @@ class CreateAccount extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.only(bottom: kMediumPadding),
           child: TextFieldComponent(
+            valKey: "userNameKey",
             hintText: hintUserName,
             inputType: TextInputType.text,
             onChanged: (val) => context.read<OnBoardingBloc>().add(
@@ -404,6 +408,7 @@ class CreateAccount extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.only(bottom: kMediumPadding),
           child: TextFieldComponent(
+            valKey: "lastNameKey",
             hintText: hintLastName,
             inputType: TextInputType.text,
             onChanged: (val) => context.read<OnBoardingBloc>().add(
@@ -421,6 +426,7 @@ class CreateAccount extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.only(bottom: kMediumPadding),
           child: TextFieldComponent(
+            valKey: "nameKey",
             hintText: hintName,
             inputType: TextInputType.text,
             onChanged: (val) => context.read<OnBoardingBloc>().add(
