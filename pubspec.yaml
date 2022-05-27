@@ -33,14 +33,17 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  swipe_deck: ^1.1.0
+  bloc: ^8.0.3
   flutter_svg: ^1.1.0
+  flutter_tindercard: ^0.2.0
   cupertino_icons: ^1.0.2
+  flutter_bloc: ^8.0.1
   dotted_border: ^2.0.0+2
   flutter_swiper: ^1.1.6
   carousel_slider: ^4.1.1
   dropdown_button2: ^1.5.2
   another_flushbar: ^1.10.29
+  flutter_riverpod: ^1.0.4
 
 
 dev_dependencies:

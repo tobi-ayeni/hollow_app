@@ -30,6 +30,34 @@ List<BottomNavyBarItem> homeItems = [
 
 List<String> walletTypes = ["Crypto Wallet", "Fiat Wallet"];
 
+List<BottomNavyBarItem> fiatTypes = [
+  BottomNavyBarItem(
+      icon: AssetPaths.ngnIcon,
+      activeColor: kHomeOrangeColor,
+      text: nairaText),
+  BottomNavyBarItem(
+      icon: AssetPaths.ngnIcon,
+      activeColor: kHomeOrangeColor,
+      text: ghanaText),
+  BottomNavyBarItem(
+      icon: AssetPaths.ngnIcon,
+      activeColor: kHomeOrangeColor,
+      text: kesText),
+  BottomNavyBarItem(
+      icon: AssetPaths.ngnIcon,
+      activeColor: kHomeOrangeColor,
+      text: dollarText),
+  BottomNavyBarItem(
+      icon: AssetPaths.ngnIcon,
+      activeColor: kHomeOrangeColor,
+      text: gbpText),
+  BottomNavyBarItem(
+      icon: AssetPaths.ngnIcon,
+      activeColor: kHomeOrangeColor,
+      text: eurText),
+];
+
+
 List<WalletList> walletList = [
   WalletList(
     walletType: nairaText,

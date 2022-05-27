@@ -33,3 +33,16 @@ String proceed = "Proceed";
 String nairaText = "NGN";
 String dollarText = "USD";
 String euroText = "EURO";
+String eightCharacters = "Must be 8 charcters at least";
+String containSpecialCharacter = "Must contain a special character";
+String containNumber = "Must contain a number at least";
+String selectCountry = "Select Country/ Currency";
+String ghanaText = "GHC";
+String kesText = "KES";
+String gbpText = "GBP";
+String eurText = "EUR";
+String successful = "Successful!";
+String successfulSub = "Your wallet has been created successfully.";
+String fundWallet = "Fund Wallet";
+String backHome = "Back to Home";
+

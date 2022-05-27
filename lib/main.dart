@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hollow/app/modules/onboarding/screens/create_account.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hollow/app/modules/onboarding/providers/auth_repository.dart';
+import 'package:hollow/app/modules/onboarding/screens/createaccountmodified.dart';
 import 'package:hollow/utils/constants.dart';
 
 void main() {
@@ -12,10 +14,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Hollow App',
-      theme: kThemeData,
-      home: const CreateAccount()
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Hollow App',
+        theme: kThemeData,
+        home: RepositoryProvider(
+          create: (context)=>AuthRepository(),
+          child:  CreateAccount(),
+        ));
   }
 }
